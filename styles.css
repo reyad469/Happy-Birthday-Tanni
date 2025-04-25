@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.birthday-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+.birthday-card::before {
+    content: '🎂';
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    animation: rotate 10s linear infinite;
+}
+
+.birthday-card::after {
+    content: '✨';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.content {
+    line-height: 1.8;
+}
+
+.message-section {
+    margin-bottom: 30px;
+}
+
+.greeting {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.message {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bengali {
+    font-size: 1.3em;
+    color: #e74c3c;
+    margin: 20px 0;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.english-translation {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.signature {
+    text-align: right;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-top: 30px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.image-section {
+    margin: 20px 0;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.birthday-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.birthday-image:hover {
+    transform: scale(1.02);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .birthday-card {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 2.5em;
+    }
+
+    .message {
+        font-size: 1em;
+    }
+
+    .bengali {
+        font-size: 1.1em;
+    }
+
+    .signature {
+        font-size: 1.3em;
+    }
+
+    .image-section {
+        margin: 15px 0;
+    }
+
+    .birthday-image {
+        border-radius: 10px;
+    }
+}
+
+/* Hover Effects */
+.message:hover {
+    transform: translateX(10px);
+    color: #2c3e50;
+}
+
+.bengali:hover {
+    transform: translateX(-10px);
+    color: #c0392b;
+} 
